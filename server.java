@@ -139,7 +139,7 @@ public class server extends javax.swing.JFrame {
             dout=new DataOutputStream(s.getOutputStream());
             String msgin="";
             
-             while(!msgin.equals("exit"))
+             while(!"exit".equals(msgin))
           {
               msgin=din.readUTF();
               msg_area.setText(msg_area.getText().trim()+"\n Server:\t"+msgin);//displaying the message..from client.

@@ -149,7 +149,7 @@ public class client extends javax.swing.JFrame {
           din=new DataInputStream(s.getInputStream());
           dout=new DataOutputStream(s.getOutputStream());  
           
-          while(!msgin.equals("exit"))
+          while(!"exit".equals(msgin))
           {
               msgin=din.readUTF();
               msg_area.setText(msg_area.getText().trim()+"\n"+msgin);//displaying the message..from client.
