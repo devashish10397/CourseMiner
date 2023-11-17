@@ -207,7 +207,7 @@ public class discuss extends javax.swing.JFrame {
           din=new DataInputStream(s.getInputStream());
           dout=new DataOutputStream(s.getOutputStream());  
           
-          while(!msgin.equals("exit"))
+          while(!"exit".equals(msgin))
           {
               msgin=din.readUTF();
               jTextArea1.setText(jTextArea1.getText().trim()+"\n"+msgin);//displaying the message..from client.
@@ -223,7 +223,7 @@ public class discuss extends javax.swing.JFrame {
             dout=new DataOutputStream(s.getOutputStream());
             String msgout="";
             
-             while(!msgout.equals("exit"))
+             while(!"exit".equals(msgout))
           {
               msgout=din.readUTF();
               jTextArea2.setText(jTextArea2.getText().trim()+"\n Server:\t"+msgout);//displaying the message..from client.
